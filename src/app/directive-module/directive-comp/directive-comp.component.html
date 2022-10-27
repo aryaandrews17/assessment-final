@@ -1,0 +1,49 @@
+
+<h1 style="text-align: center;">Contact Us</h1>
+
+<br><br>
+
+<table >
+    <tr>
+        <th *ngFor="let columnlabel of tableHeaders;" >
+            {{columnlabel}}
+        </th>
+    </tr>
+    <tr *ngFor="let tableData of rows; let i =index" >
+   
+    <td>{{i+1}}</td>
+    
+    <td (dblclick) ="onEdit(tableData,'name')">
+        <div *ngIf="tableData.isEditField=='name'">
+                <input type = "text" [(ngModel)]="tableData.name" />
+                  
+                <button  (click) ="save(tableData)">Update</button>
+
+        </div>
+        <div *ngIf="tableData.isEditField !=='name'">
+            {{tableData.name}}
+        </div>
+    </td> 
+     
+    <td (dblclick) ="onEdit(tableData,'username')">
+        <div *ngIf="tableData.isEditField=='username'">
+            <input type = "text" [(ngModel)]="tableData.username" />
+            <button  (click) ="save(tableData)">Update</button>
+    </div>
+    <div *ngIf="tableData.isEditField !=='username'">
+        {{tableData.username}}
+    </div>
+    </td> 
+    <td (dblclick) ="onEdit(tableData,'email')">
+        <div *ngIf="tableData.isEditField=='email'">
+            <input type = "text" [(ngModel)]="tableData.email" />
+            <button  (click) ="save(tableData)">Update</button>
+    </div>
+    <div *ngIf="tableData.isEditField !=='email'">
+        {{tableData.email}}
+    </div>
+    </td> 
+    
+    </tr>
+</table>
+
