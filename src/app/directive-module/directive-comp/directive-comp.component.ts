@@ -12,92 +12,94 @@ headerData:any;
 enableEdit: boolean | undefined;
 enableEditIndex: any;
 i: any;
+columnlabel: any;
+
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-   tableHeaders: any= ["Id","Name","Username","Email"]; 
+   tableHeaders: any= ["id","name","username","email"]; 
 user:any;
   rows : any[]= [{
-    // "id": 1,
+     "id": 1,
     "name": "Ross",
     "username": "Ross123",
     "email": "Ross@gmail.com",
-    "isEditField" : ''
+    // "isEditField" : ''
    
   },
   {
-    // "id": 2,
+     "id": 2,
     "name": "Rachel",
     "username": "Rachel123",
     "email": "Rachel@gmail.com",
-    "isEditField" : ''
+    // "isEditField" : ''
     
   },
   {
-    // "id": 3,
+    "id": 3,
     "name": "Monica",
     "username": "Monica123",
     "email": "Monica@gmail.com",
-    "isEditField" : ''
+    // "isEditField" : ''
    
   },
   {
-    // "id": 4,
+     "id": 4,
     "name": "Chandler",
     "username": "Chandler123",
     "email": "Chandler@gmail.com",
-    "isEditField" : ''
+    // "isEditField" : ''
     
   },
   {
-    // "id": 5,
+     "id": 5,
     "name": "Pheobe",
     "username": "Pheobe123",
     "email": "Pheobe@gmail.com",
-    "isEditField" : ''
+    // "isEditField" : ''
     
   },
   {
-    // "id": 6,
+     "id": 6,
     "name": "Joey",
     "username": "Joey123",
     "email": "Joey@gmail.com",
-    "isEditField" : ''
+    // "isEditField" : ''
     
   },
   {
-    // "id": 7,
+    "id": 7,
     "name": "Jennifer",
     "username": "Jennifer123",
     "email": "Jennifer@gmail.com",
-    "isEditField" : ''
+    // "isEditField" : ''
    
   },
   {
-    // "id": 8,
+    "id": 8,
     "name": "Courtney",
     "username": "Courtney123",
     "email": "Courtney@gmail.com",
-    "isEditField" : ''
+    // "isEditField" : ''
     
   },
   {
-    // "id": 9,
+    "id": 9,
     "name": "Mathew",
     "username": "Mathew123",
     "email": "Mathew@gmail.com",
-    "isEditField" : ''
+    // "isEditField" : ''
    
   },
   {
-    // "id": 10,
+    "id": 10,
     "name": "David",
     "username": "David123",
     "email": "David@gmail.com",
-    "isEditField" : ''
+    // "isEditField" : ''
     
   }
   
