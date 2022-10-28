@@ -9,8 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class DirectiveCompComponent implements OnInit {
 rowColor: any;
 headerData:any;
-enableEdit: boolean | undefined;
-enableEditIndex: any;
+// enableEdit: boolean | undefined;
+// enableEditIndex: any;
 i: any;
 columnlabel: any;
 
@@ -21,7 +21,7 @@ columnlabel: any;
   }
 
    tableHeaders: any= ["id","name","username","email"]; 
-user:any;
+  user:any;
   rows : any[]= [{
      "id": 1,
     "name": "Ross",
@@ -104,18 +104,23 @@ user:any;
   }
   
 ]
-
+ 
 
 onEdit(item:any, field:string){
- 
+  
    this.rows.forEach(element =>{
     element.isEditField = false;
+    element.field = '';
   }) 
-  item.isEditField = field;
+  item.field = field;
+  item.isEditField = true;
+  
 }
 
+
+
 save(item:any){
-  item.isEditField = '';
+  item.field = '';
 }
 
 }

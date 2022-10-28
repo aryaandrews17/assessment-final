@@ -9,20 +9,16 @@
             {{columnlabel}}
         </th>
     </tr>
-    <tr *ngFor="let tableData of rows" >
+    <tr *ngFor="let tableData of rows"  >
         
-        <td *ngFor="let columnlabel of tableHeaders" (dblclick) ="onEdit(tableData,'columnlabel')">
-           
-   
-    
-    
-        <div *ngIf="tableData.isEditField=='columnlabel'">
+        <td  *ngFor="let columnlabel of tableHeaders let i = index" (dblclick) ="onEdit(tableData, columnlabel)">
+        <div *ngIf="tableData.isEditField==true && tableData.field==columnlabel">
                 <input type = "text" [(ngModel)]="tableData[columnlabel]" />
                   
                 <button  (click) ="save(tableData)">Update</button>
 
         </div>
-        <div *ngIf="tableData.isEditField !=='columnlabel'"> 
+        <div *ngIf="tableData.isEditField !==columnlabel && tableData.field !== columnlabel"> 
             {{tableData[columnlabel]}}
         </div>
         </td>
